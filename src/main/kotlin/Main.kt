@@ -40,9 +40,7 @@ fun minutesToYearsAndMonths(minutes: Long) {
 
 fun calculateSquareOfRectangle(width: Double , height: Double) {
 
-    val result: Double;
-
-    result = sqrt(width.pow(2.0) + height.pow(2.0))
+    val result: Double = sqrt(width.pow(2.0) + height.pow(2.0))
 
     val numberFormat = DecimalFormat("#.000")
     println(numberFormat.format(result))
