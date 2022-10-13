@@ -1,20 +1,27 @@
 import java.text.DecimalFormat
+import java.util.Scanner
 import kotlin.math.pow
 import kotlin.math.sqrt
 
 fun main(args: Array<String>) {
 
-    sumOfDigitsInNumber(825);
+    sumOfDigitsInNumber();
 
-    minutesToYearsAndMonths(38578378)
+    minutesToYearsAndMonths()
 
-    calculateSquareOfRectangle(10.0, 3.0);
+    calculateSquareOfRectangle()
 }
 
 
-fun sumOfDigitsInNumber(number: Int) {
+fun sumOfDigitsInNumber() {
 
-    var temp = number;
+    val scanner = Scanner(System.`in`)
+
+    println("Введите число")
+
+    val input = scanner.nextInt()
+
+    var temp = input
 
     val numbers = arrayListOf<Int>()
 
@@ -25,12 +32,18 @@ fun sumOfDigitsInNumber(number: Int) {
 
     val result = numbers.sum()
 
-    println("сумма чисел в числе $number равна $result")
+    println("сумма чисел в числе $input равна $result")
 }
 
-fun minutesToYearsAndMonths(minutes: Long) {
+fun minutesToYearsAndMonths() {
 
-    val months = (minutes / 43800L);
+    val scanner = Scanner(System.`in`)
+
+    println("Введите число")
+
+    val minutes = scanner.nextInt()
+
+    val months = (minutes / 43800L)
     val years = months / 12
     val remainingMonths = months % 12
 
@@ -38,7 +51,15 @@ fun minutesToYearsAndMonths(minutes: Long) {
 
 }
 
-fun calculateSquareOfRectangle(width: Double , height: Double) {
+fun calculateSquareOfRectangle() {
+
+    val scanner = Scanner(System.`in`)
+
+    println("Введите ширину")
+    val width = scanner.nextDouble()
+
+    println("Введите высоту")
+    val height = scanner.nextDouble()
 
     val result: Double = sqrt(width.pow(2.0) + height.pow(2.0))
 
