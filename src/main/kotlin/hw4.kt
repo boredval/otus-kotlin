@@ -46,7 +46,7 @@ fun task3() {
 
     val floor = scanner.nextInt()
 
-    for (i in  1..floor) {
-        println(" ".repeat(floor-i)+" *".repeat(i))
+    for (i in 1..floor) {
+        println(" ".repeat(floor - i) + " *".repeat(i))
     }
 }
