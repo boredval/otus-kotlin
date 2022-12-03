@@ -1,12 +1,10 @@
 import java.util.*
 
 fun main() {
-//    task1()
-//    task2()
-    task3()
+
 }
 
-fun task1() {
+fun hw4Task1() {
     val scanner = Scanner(System.`in`)
 
     var num = scanner.nextInt()
@@ -27,7 +25,7 @@ fun task1() {
         println("$originalInteger is not a palindrome.")
 }
 
-fun task2() {
+fun hw4Task2() {
     val scanner = Scanner(System.`in`)
 
     val num = scanner.nextInt()
@@ -41,7 +39,7 @@ fun task2() {
 
 }
 
-fun task3() {
+fun hw4Task3() {
     val scanner = Scanner(System.`in`)
 
     val floor = scanner.nextInt()

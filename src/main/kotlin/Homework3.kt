@@ -2,12 +2,10 @@ import java.util.*
 import kotlin.system.exitProcess
 
 fun main() {
-//    task1()
-//    task2()
-    task3()
+
 }
 
-fun task1() {
+fun hw3Task1() {
     var daysInYears = 365
     val scanner = Scanner(System.`in`)
     val month = scanner.nextInt()
@@ -36,7 +34,7 @@ fun task1() {
     println(daysInYears - result)
 }
 
-fun task2() {
+fun hw3Task2() {
     val scanner = Scanner(System.`in`)
     val input = scanner.nextInt()
 
@@ -78,7 +76,7 @@ fun task2() {
 
 }
 
-fun task3() {
+fun hw3Task3() {
 
     val scanner = Scanner(System.`in`)
     val firstInput = scanner.nextInt()
