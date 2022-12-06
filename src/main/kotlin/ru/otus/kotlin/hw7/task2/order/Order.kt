@@ -1,9 +1,9 @@
 package ru.otus.kotlin.hw7.task2.order
 
-import hw7.task2.Customer
-import hw7.task2.enum.OrderStatus
-import ru.otus.hw_7.task_2.order.OrderDetails
-import ru.otus.hw_7.task_2.payment.Payment
+
+import ru.otus.kotlin.hw7.task2.Customer
+import ru.otus.kotlin.hw7.task2.enum.OrderStatus
+import ru.otus.kotlin.hw7.task2.payment.Payment
 import java.sql.Date
 import java.time.LocalDate
 

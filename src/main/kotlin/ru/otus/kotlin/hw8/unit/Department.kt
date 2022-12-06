@@ -1,6 +1,7 @@
 package ru.otus.kotlin.hw8.unit
 
-import hw8.employee.Employee
+import ru.otus.kotlin.hw8.employee.Employee
+
 
 class Department(private var name: String) : Unit {
 

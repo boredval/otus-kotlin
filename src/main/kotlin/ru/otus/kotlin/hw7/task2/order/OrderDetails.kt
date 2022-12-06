@@ -1,4 +1,4 @@
-package ru.otus.hw_7.task_2.order
+package ru.otus.kotlin.hw7.task2.order
 
 class OrderDetails(val items: List<OrderItem>) {
 

@@ -1,6 +1,6 @@
 package ru.otus.kotlin.hw8.employee
 
-import hw8.unit.Department
+import ru.otus.kotlin.hw8.unit.Department
 
 
 data class Employee(private var position: String, override var name: String, override var surname: String) : Man() {

@@ -1,4 +1,4 @@
-package ru.otus.hw_7.task_2.payment
+package ru.otus.kotlin.hw7.task2.payment
 
 import java.util.*
 
