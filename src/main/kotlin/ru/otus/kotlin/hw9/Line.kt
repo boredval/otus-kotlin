@@ -2,25 +2,25 @@ package ru.otus.kotlin.hw9
 
 import kotlin.math.*
 
-open class Line(private var a: Point, private var b: Point) {
+open class Line(var p1: Point, var p2: Point) {
 
     constructor(aX: Double, aY: Double, bX: Double, bY: Double) : this(Point(aX, aY), Point(bX, bY))
-    constructor(line: Line) : this(line.a, line.b)
+    constructor(line: Line) : this(line.p1, line.p2)
 
     fun angle(): Double {
         return Math.toDegrees(
-            atan((b.getY() - a.getY()) / (b.getX() - a.getX()))
+            atan((p2.getY() - p1.getY()) / (p2.getX() - p1.getX()))
         )
     }
 
     fun len(): Double {
-        return sqrt((a.getX() - b.getX()).pow(2.0) + (a.getY() - b.getY()).pow(2))
+        return sqrt((p1.getX() - p2.getX()).pow(2.0) + (p1.getY() - p2.getY()).pow(2))
     }
 
     fun rotate(degrees: Double): Line {
-        val x2 = (b.getX() * cos(degrees) - b.getY() * sin(degrees))
-        val y2 = (b.getY() * cos(degrees) + b.getX() * sin(degrees))
-        return Line(a.getX(), a.getY(), x2, y2)
+        val x2 = (p2.getX() * cos(degrees) - p2.getY() * sin(degrees))
+        val y2 = (p2.getY() * cos(degrees) + p2.getX() * sin(degrees))
+        return Line(p1.getX(), p1.getY(), x2, y2)
     }
 
     fun rotate90(dir: Int): Line {
@@ -28,9 +28,9 @@ open class Line(private var a: Point, private var b: Point) {
             dir < 0 -> 90.0
             else -> -90.0
         }
-        val x2 = (b.getX() * cos(degrees) - b.getY() * sin(degrees))
-        val y2 = (b.getY() * cos(degrees) + b.getX() * sin(degrees))
-        return Line(a.getX(), a.getY(), x2, y2)
+        val x2 = (p2.getX() * cos(degrees) - p2.getY() * sin(degrees))
+        val y2 = (p2.getY() * cos(degrees) + p2.getX() * sin(degrees))
+        return Line(p1.getX(), p1.getY(), x2, y2)
     }
 
     open fun isOnLine(p: Point): Boolean {
@@ -40,18 +40,18 @@ open class Line(private var a: Point, private var b: Point) {
     }
 
     open fun isOnLine(pX: Double, pY: Double): Boolean {
-        return (pX - a.getX()) * (b.getY() - a.getY()) - (b.getX() - a.getX()) * (pY - a.getY()) == 0.0
+        return (pX - p1.getX()) * (p2.getY() - p1.getY()) - (p2.getX() - p1.getX()) * (pY - p1.getY()) == 0.0
     }
 
     override fun toString(): String {
-        return "Line(a=$a, b=$b)"
+        return "Line(a=$p1, b=$p2)"
     }
 
     fun getFirstPoint(): Point {
-        return a
+        return p1
     }
 
     fun getSecondPoint(): Point {
-        return b
+        return p2
     }
 }

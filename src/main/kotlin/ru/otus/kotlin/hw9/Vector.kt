@@ -1,6 +1,6 @@
 package ru.otus.kotlin.hw9
 
-class Vector(private var p2: Point) : Line(Point(), p2) {
+class Vector(p2: Point) : Line(Point(), p2) {
 
     constructor(x: Double, y: Double) : this(Point(x, y))
     constructor(line: Line) : this(Point(line.getSecondPoint().getX(), line.getSecondPoint().getY()))

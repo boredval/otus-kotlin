@@ -4,7 +4,7 @@ import kotlin.math.acos
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-class BrokenCurve(var p1: Point, var p2: Point, var p3: Point) : Line(p1, p2) {
+class BrokenCurve(p1: Point, p2: Point, val p3: Point) : Line(p1, p2) {
 
     fun angleMiddle(): Float {
         val x1 = p1.getX() - p2.getX()
