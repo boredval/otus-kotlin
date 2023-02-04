@@ -1,6 +1,5 @@
 package ru.otus.kotlin.hw10
 
-import java.time.LocalDateTime
 import kotlin.math.max
 
 fun main() {
@@ -8,14 +7,22 @@ fun main() {
     val lambdaFunction: () -> Unit = { println("executed") }
 
     fun executeLambdaFunc(n: Int, f: () -> Unit) = repeat(n) { f() }
+
     executeLambdaFunc(10, lambdaFunction)
 
     //task2
     fun main_f(f: () -> Unit) {
-        println(LocalDateTime.now())
-        f()
-        println(LocalDateTime.now())
+        val start = System.currentTimeMillis()
+
+        val func = f()
+
+        val end = System.currentTimeMillis()
+
+        println("function start time:$start , end time:$end")
+
+        return func
     }
+
     main_f(lambdaFunction)
 
     fun knapsack(weights: IntArray, costs: IntArray, needed: Int): Int {
